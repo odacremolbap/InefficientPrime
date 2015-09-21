@@ -2,6 +2,8 @@
   <body>
 <?php
 
+$time = microtime(true);
+
 $n = rand ( 100000000 , 300000000 );
 
 function Prime($num) {
@@ -21,8 +23,10 @@ echo "Number " + $n;
 if ($prime) {
   echo " is prime";
 } else {
-    echo "is not prime";
+    echo "is not a prime number</br>";
 }
+
+echo (microtime(true) - $time) . ' microseconds elapsed';
 ?>
 </body>
 </html>
